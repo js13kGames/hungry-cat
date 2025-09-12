@@ -35,7 +35,9 @@ class EndScreen extends BaseState {
         }
     }
 
-    cleanup(): void {}
+    cleanup(): void {
+        Sound.stopMusic();
+    }
 }
 
 export default EndScreen;

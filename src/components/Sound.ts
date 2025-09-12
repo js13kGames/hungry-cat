@@ -9,13 +9,20 @@ export default class Sound {
         bounce: [,,667,,.1,.08,,1.7,,-3,,,,,,,,.87,.04]
     }
 
+    static node: {loop: boolean, stop: () => void, disconnect: () => void}
+
     static play(effectName: string) {
         window.zzfx(...Sound.effects[effectName]);
     }
 
     static music() {
         const buffer = window.zzfxM(...(song));
-        const node = window.zzfxP(...buffer);
-        node.loop = true;
+        Sound.node = window.zzfxP(...buffer);
+        Sound.node.loop = true;
+    }
+
+    static stopMusic() {
+        Sound.node?.stop();
+        Sound.node?.disconnect();
     }
 }

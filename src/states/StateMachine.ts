@@ -2,7 +2,6 @@ import Loading from './Loading.ts';
 import {STATE_NAMES} from '../global/constants.ts';
 import type {IGameScene} from '../types.ts';
 import states from './states.ts';
-import Sound from '../components/Sound.ts';
 
 type StateConstructor = new (newState: StateMachine) => IGameScene;
 
@@ -14,7 +13,7 @@ export default class StateMachine {
     constructor(states: Record<string, StateConstructor>) {
         this.states = states;
         this.currentState = new Loading(this); // initial state
-        Sound.music();
+
     }
 
     public static getInstance(): StateMachine {

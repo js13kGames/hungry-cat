@@ -42,7 +42,7 @@ class Spawn{
 
     spawn() {
         let obj: Collision;
-        if (Math.random() > 0.70) { // 30% chance of asteroids
+        if (Math.random() > 0.75) { // 25% chance of asteroids
             obj = new Asteroid({...this.position}, calculateVelocity(this.direction, 150));
         } else {
             obj = new Food(
