@@ -1,6 +1,7 @@
 ## Hungry Cat
 
 #### A little game about space mission for black cat.
+#### Special for [Js13kGames](https://js13kgames.com/) 
 
 ![cat icon](cat.png)
 
