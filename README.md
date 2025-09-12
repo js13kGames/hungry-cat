@@ -1,7 +1,5 @@
 ## Hungry Cat
 
----
-
 #### A little game about space mission for black cat.
 
 ![cat icon](cat.png)
